@@ -1,0 +1,185 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #000;
+  background: #fff;
+}
+
+/* Шапка */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 24px;
+  gap: 2px;
+}
+
+.logo__square {
+  display: block;
+  width: 10px;
+  height: 8px;
+  background: #790b0b;
+}
+
+.header__brand {
+  font-weight: 900;
+  color: #790b0b;
+}
+
+.header__description {
+  font-size: 0.9rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+.header__icons {
+  font-weight: 800;
+}
+
+/* Основной контент */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product {
+  margin-bottom: 40px;
+}
+
+.product__title {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.product__image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.product__description {
+  font-size: 1rem;
+  max-width: 800px;
+}
+
+/* Особенности */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+  padding: 30px;
+  background: url('numbers.png') no-repeat center/cover;
+  color: #fff;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature__number {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.feature__text {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Предложение */
+.offer {
+  margin: 60px 0;
+}
+
+.offer__title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.offer__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.offer__list {
+  flex: 1;
+  min-width: 300px;
+  padding: 0;
+  list-style: none;
+}
+
+.offer__list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.offer__image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  height: auto;
+}
+
+.offer__price {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.offer__price s {
+  color: #777;
+}
+
+.offer__button {
+  background: #b82222;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 900;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Подвал */
+.footer__image {
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: cover;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .offer__content {
+    flex-direction: column;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
